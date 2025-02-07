@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BSC Chain BEP20 Addresses - Paca Finance</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .address-container {
+            margin-top: 2rem;
+        }
+
+        .address-item {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 4px solid #3498db;
+        }
+
+        .token-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .token-symbol {
+            font-weight: bold;
+            color: #2c3e50;
+            min-width: 80px;
+        }
+
+        .address {
+            font-family: monospace;
+            color: #666;
+            word-break: break-all;
+        }
+
+        .copy-button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .copy-button:hover {
+            background-color: #2980b9;
+        }
+
+        .copy-feedback {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #2ecc71;
+            color: white;
+            padding: 1rem;
+            border-radius: 4px;
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .address-item {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .token-info {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-links">
+            <a href="landing.html">← Back to Guides</a>
+        </div>
+
+        <h1>BSC Chain BEP20 Addresses</h1>
+        <p class="subtitle">Quick reference for commonly used token contract addresses on BSC Chain</p>
+
+        <div class="address-container">
+            <div class="address-item">
+                <div class="token-info">
+                    <span class="token-symbol">WBNB</span>
+                    <span class="address">0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c</span>
+                </div>
+                <button class="copy-button" onclick="copyAddress('0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c')">Copy Address</button>
+            </div>
+
+            <div class="address-item">
+                <div class="token-info">
+                    <span class="token-symbol">CAKE</span>
+                    <span class="address">0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82</span>
+                </div>
+                <button class="copy-button" onclick="copyAddress('0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82')">Copy Address</button>
+            </div>
+
+            <div class="address-item">
+                <div class="token-info">
+                    <span class="token-symbol">BTCB</span>
+                    <span class="address">0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c</span>
+                </div>
+                <button class="copy-button" onclick="copyAddress('0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c')">Copy Address</button>
+            </div>
+
+            <div class="address-item">
+                <div class="token-info">
+                    <span class="token-symbol">XRP</span>
+                    <span class="address">0x1d2f0da169ceb9fc7b3144628db156f3f6c60dbe</span>
+                </div>
+                <button class="copy-button" onclick="copyAddress('0x1d2f0da169ceb9fc7b3144628db156f3f6c60dbe')">Copy Address</button>
+            </div>
+
+            <div class="address-item">
+                <div class="token-info">
+                    <span class="token-symbol">SHIB</span>
+                    <span class="address">0x2859e4544C4bB03966803b044A93563Bd2D0DD4D</span>
+                </div>
+                <button class="copy-button" onclick="copyAddress('0x2859e4544C4bB03966803b044A93563Bd2D0DD4D')">Copy Address</button>
+            </div>
+
+            <div class="address-item">
+                <div class="token-info">
+                    <span class="token-symbol">DOT</span>
+                    <span class="address">0x7083609fce4d1d8dc0c979aab8c869ea2c873402</span>
+                </div>
+                <button class="copy-button" onclick="copyAddress('0x7083609fce4d1d8dc0c979aab8c869ea2c873402')">Copy Address</button>
+            </div>
+
+            <div class="address-item">
+                <div class="token-info">
+                    <span class="token-symbol">ETH</span>
+                    <span class="address">0x2170ed0880ac9a755fd29b2688956bd959f933f8</span>
+                </div>
+                <button class="copy-button" onclick="copyAddress('0x2170ed0880ac9a755fd29b2688956bd959f933f8')">Copy Address</button>
+            </div>
+
+            <div class="address-item">
+                <div class="token-info">
+                    <span class="token-symbol">ADA</span>
+                    <span class="address">0x3ee2200efb3400fabb9aacf31297cbdd1d435d47</span>
+                </div>
+                <button class="copy-button" onclick="copyAddress('0x3ee2200efb3400fabb9aacf31297cbdd1d435d47')">Copy Address</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="copy-feedback" id="copyFeedback">Address copied to clipboard!</div>
+
+    <script>
+        function copyAddress(address) {
+            navigator.clipboard.writeText(address).then(() => {
+                const feedback = document.getElementById('copyFeedback');
+                feedback.style.display = 'block';
+                setTimeout(() => {
+                    feedback.style.display = 'none';
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
