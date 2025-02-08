@@ -6,6 +6,12 @@
     <title>Paca Finance Guides</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        :root {
+            --primary-green: #2ecc71;
+            --hover-green: #27ae60;
+            --light-green: #e8f8f5;
+        }
+
         .logo-container {
             text-align: center;
             margin: 2rem 0;
@@ -48,19 +54,16 @@
         }
 
         .guide-card {
-            background: white;
+            background: var(--light-green);
+            border: 1px solid var(--primary-green);
             border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s, box-shadow 0.2s;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
         }
 
         .guide-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 6px 12px rgba(46, 204, 113, 0.15);
         }
 
         .guide-card-content {
@@ -71,7 +74,7 @@
         }
 
         .guide-card h2 {
-            color: #2c3e50;
+            color: var(--primary-green);
             margin: 0 0 1rem 0;
             font-size: 1.5rem;
             font-weight: 600;
@@ -86,18 +89,17 @@
 
         .guide-card a {
             display: inline-block;
-            background: #3498db;
+            background: var(--primary-green);
             color: white;
-            text-decoration: none;
-            padding: 0.8rem 1.5rem;
+            padding: 0.5rem 1.5rem;
             border-radius: 6px;
-            margin-top: 1.5rem;
-            font-weight: 500;
-            transition: background 0.2s;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: background 0.3s ease;
         }
 
         .guide-card a:hover {
-            background: #2980b9;
+            background: var(--hover-green);
         }
 
         @media (max-width: 768px) {
