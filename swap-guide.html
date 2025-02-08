@@ -50,6 +50,36 @@
         .referral-link:hover {
             background-color: #2980b9;
         }
+        
+        .step-image {
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+            margin: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .step-with-image {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .step-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        @media (max-width: 768px) {
+            .step-with-image {
+                flex-direction: column;
+            }
+            
+            .step-image {
+                max-width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -63,9 +93,14 @@
             
             <div class="step-container">
                 <div class="step swap-step">
-                    <h2>Step 1: Access SwapX</h2>
-                    <p>Click on the button below to access SwapX using the Paca Finance referral link:</p>
-                    <a href="https://swapx.fi/earn?referrer=pacafinance" target="_blank" class="referral-link">Open SwapX with Referral</a>
+                    <div class="step-with-image">
+                        <div class="step-content">
+                            <h2>Step 1: Access SwapX</h2>
+                            <p>Click on the button below to access SwapX using the Paca Finance referral link:</p>
+                            <a href="https://swapx.fi/earn?referrer=pacafinance" target="_blank" class="referral-link">Open SwapX with Referral</a>
+                        </div>
+                        <img src="https://na-703498136.imgix.net/swapxlp.png" alt="SwapX Interface" class="step-image">
+                    </div>
                 </div>
 
                 <div class="step swap-step">
