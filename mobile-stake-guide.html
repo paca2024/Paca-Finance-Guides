@@ -32,6 +32,30 @@
             margin: 1.5rem 0;
             border-radius: 8px;
         }
+
+        .step-with-image {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .step-image {
+            max-width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .step-with-image {
+                flex-direction: column;
+            }
+            
+            .step-image {
+                max-width: 100%;
+                margin-top: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -49,9 +73,12 @@
             </div>
             
             <div class="step-container">
-                <div class="step">
-                    <h2>Step 1: Connect Your Mobile Wallet</h2>
-                    <p>First, ensure your mobile wallet is properly set up and connected to the BSC network.</p>
+                <div class="step-with-image">
+                    <div class="step-content">
+                        <h2>Step 1: Connect Your Mobile Wallet</h2>
+                        <p>First, ensure your mobile wallet is properly set up and connected to the BSC network.</p>
+                    </div>
+                    <img src="https://na-703498136.imgix.net/mm.jpg" alt="Connect Mobile Wallet" class="step-image">
                 </div>
 
                 <div class="step">
