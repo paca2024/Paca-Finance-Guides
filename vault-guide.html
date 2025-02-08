@@ -5,6 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paca Vault Guide - Paca Finance</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .vault-section {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .example-box {
+            background: #e8f4fd;
+            border-left: 4px solid #3498db;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+
+        .important-note {
+            background: #fff5f5;
+            border-left: 4px solid #e74c3c;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+
+        .key-point {
+            font-weight: 500;
+            color: #2c3e50;
+            margin: 1rem 0;
+        }
+
+        .calculation {
+            font-family: monospace;
+            background: #f1f1f1;
+            padding: 0.5rem;
+            border-radius: 4px;
+            margin: 0.5rem 0;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -13,26 +51,63 @@
         </div>
         
         <div class="guide-content">
-            <h1 class="text-center">Paca Vault Guide</h1>
+            <h1 class="text-center">THE VAULT</h1>
             <div class="guide-image-container">
                 <img src="https://na-703498136.imgix.net/paca_vault_logo.png" alt="Paca Vault Logo" class="guide-image">
             </div>
             
-            <div class="step-container">
-                <div class="intro-text">
-                    <p>Welcome to the Paca Vault guide. Our vault system is designed to provide secure and efficient management of your digital assets.</p>
-                </div>
+            <div class="vault-section">
+                <h2>Key Features</h2>
+                <div class="key-point">• You do not have to be in the pools to be in the vault.</div>
+                <div class="key-point">• Vault stakes do not compound, they are static.</div>
+                <div class="key-point">• Vault Bonuses are in Stables.</div>
+                <div class="key-point">• Each Tier has to be on the same Chain.</div>
+            </div>
 
-                <div class="step">
-                    <h2>Coming Soon</h2>
-                    <p>We're currently preparing comprehensive documentation for the Paca Vault. Check back soon for detailed guides on:</p>
-                    <ul>
-                        <li>How to deposit assets</li>
-                        <li>Managing your vault holdings</li>
-                        <li>Optimizing returns</li>
-                        <li>Security features and best practices</li>
-                    </ul>
+            <div class="vault-section">
+                <h2>Vesting Period & Unlocking</h2>
+                <p>Stakes in the vaults will go in on a vesting period of 250 days but every 25 days, 10% of your assets are unlocked so you can:</p>
+                <ul>
+                    <li>Re-stake</li>
+                    <li>Sell</li>
+                    <li>Leave them in to maintain your tier</li>
+                </ul>
+            </div>
+
+            <div class="vault-section">
+                <h2>Bonus Structure</h2>
+                <p>Whatever the dollar amount at the time you staked the asset, you will get a 10% bonus.</p>
+                
+                <div class="example-box">
+                    <h3>Example Calculation</h3>
+                    <p>For a $3,500 tier 1 deposit:</p>
+                    <div class="calculation">
+                        • Every 25 days: 10% of stake = $350<br>
+                        • Bonus payment: 10% of $350 = $35<br>
+                        • Total per period: $385
+                    </div>
+                    <p>This will also increase your new pool stakes to 0.34% daily (0.41% during promos)</p>
                 </div>
+            </div>
+
+            <div class="vault-section">
+                <h2>Important Information</h2>
+                <ul>
+                    <li>The bonus Tier for Vault deposits will count for any stakes made after you hit the tier.</li>
+                    <li>It won't count for stakes already registered.</li>
+                    <li>Each Vault is chain specific - you can hit a separate Tier on each chain.</li>
+                    <li>The bonus % applies to the stable coin Pool on that specific chain.</li>
+                </ul>
+            </div>
+
+            <div class="vault-section">
+                <h2>Automatic APR Boost</h2>
+                <p>When you make a new stake in the Pools tab, the system automatically checks your Vaults to see if you qualify for the APR Boost and applies it if eligible.</p>
+            </div>
+
+            <div class="important-note">
+                <h3>⚠️ Important Note</h3>
+                <p>If you claim your Tokens and your Investment Total goes down, you may drop out of your Tier. To maintain your tier, simply top it up with a coin/Token on the same chain.</p>
             </div>
         </div>
     </div>
