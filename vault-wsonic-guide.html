@@ -33,6 +33,23 @@
             margin-bottom: 2rem;
         }
 
+        .step-with-image {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .step-text {
+            flex: 1;
+        }
+
+        .step-image {
+            max-width: 400px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
         .benefits-list {
             list-style-type: none;
             padding: 0;
@@ -50,6 +67,17 @@
             position: absolute;
             left: 0;
             font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .step-with-image {
+                flex-direction: column;
+            }
+            
+            .step-image {
+                max-width: 100%;
+                margin-top: 1rem;
+            }
         }
     </style>
 </head>
@@ -71,14 +99,15 @@
                     <p>wSONIC is the wrapped version of SONIC token, allowing you to use it in various DeFi applications while maintaining its value and utility.</p>
                 </div>
                 
-                <div class="step-content">
-                    <h3>Step 1: Obtain wSONIC</h3>
-                    <p>Before using the vault, ensure you have wSONIC tokens:</p>
-                    <ol>
-                        <li>Connect your wallet to Paca Finance</li>
-                        <li>Use the swap feature to convert SONIC to wSONIC</li>
-                        <li>Confirm you have received your wSONIC tokens</li>
-                    </ol>
+                <div class="step-with-image">
+                    <div class="step-text">
+                        <h3>Step 1: Obtain wSONIC</h3>
+                        <p>Before using the vault:</p>
+                        <ol>
+                            <li>Connect your wallet to Paca Finance</li>
+                        </ol>
+                    </div>
+                    <img src="https://na-703498136.imgix.net/paca_home_page.png" alt="Paca Finance Homepage" class="step-image">
                 </div>
 
                 <div class="step-content">
