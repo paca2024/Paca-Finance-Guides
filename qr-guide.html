@@ -32,6 +32,31 @@
         .step-content {
             margin-bottom: 2rem;
         }
+
+        .step-with-image {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .step-image {
+            max-width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .step-with-image {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .step-image {
+                max-width: 100%;
+                margin-top: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -57,9 +82,12 @@
                     <p>Look for the scan or QR code icon in your wallet app</p>
                 </div>
 
-                <div class="step-content">
-                    <h3>Step 3: Scan the QR Code</h3>
-                    <p>Point your camera at the QR code displayed on the Paca Finance website</p>
+                <div class="step-with-image">
+                    <div class="step-content">
+                        <h3>Step 3: Scan the QR Code</h3>
+                        <p>Point your camera at this QR code:</p>
+                    </div>
+                    <img src="https://na-703498136.imgix.net/Screenshot%202025-02-08%20192211.png" alt="Paca Finance QR Code" class="step-image">
                 </div>
 
                 <div class="step-content">
