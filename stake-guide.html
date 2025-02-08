@@ -13,6 +13,36 @@
             margin: 1rem 0 2rem 0;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
+        
+        .step-image {
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+            margin: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .step-with-image {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .step-content {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        @media (max-width: 768px) {
+            .step-with-image {
+                flex-direction: column;
+            }
+            
+            .step-image {
+                max-width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -27,7 +57,17 @@
             
             <div class="step-container">
                 <div class="step">
-                    <h2>Step 1: Make Your Decision</h2>
+                    <div class="step-with-image">
+                        <div class="step-content">
+                            <h2>Step 1: Enter Your Stake ID</h2>
+                            <p>Start by entering your stake ID in the input field.</p>
+                        </div>
+                        <img src="https://na-703498136.imgix.net/inout%20stake%20id.png" alt="Stake ID Input" class="step-image">
+                    </div>
+                </div>
+
+                <div class="step">
+                    <h2>Step 2: Make Your Decision</h2>
                     <p>Decide what action to take:</p>
                     <ul>
                         <li>Re-stake your funds</li>
@@ -37,12 +77,12 @@
                 </div>
 
                 <div class="step">
-                    <h2>Step 2: For Re-staking</h2>
+                    <h2>Step 3: For Re-staking</h2>
                     <p>Simply click on "Confirm" and action in wallet.</p>
                 </div>
 
                 <div class="step">
-                    <h2>Step 3: For Full Withdrawal</h2>
+                    <h2>Step 4: For Full Withdrawal</h2>
                     <p>Enter "0" in the box and click "Confirm"</p>
                     <div class="important-note">
                         <h3>Important: 36-Hour Wait Period</h3>
@@ -51,7 +91,7 @@
                 </div>
 
                 <div class="step">
-                    <h2>Step 4: After 36 Hours</h2>
+                    <h2>Step 5: After 36 Hours</h2>
                     <ol>
                         <li>Navigate to the Paca site</li>
                         <li>Click on the withdrawal icon</li>
