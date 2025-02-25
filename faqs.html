@@ -37,10 +37,23 @@
             line-height: 1.6;
         }
 
+        .category-title-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .category-title-container img {
+            height: 40px;
+            width: auto;
+            vertical-align: middle;
+        }
+
         .category-title {
+            margin: 0;
             color: #2c3e50;
             font-size: 1.5rem;
-            margin: 2rem 0 1rem;
             padding-bottom: 0.5rem;
             border-bottom: 2px solid #2ecc71;
         }
@@ -80,7 +93,9 @@
             </div>
             
             <div class="faq-section">
-                <h2 class="category-title">General Questions</h2>
+                <div class="category-title-container">
+                    <h2 class="category-title">General Questions</h2>
+                </div>
                 
                 <div class="faq-item">
                     <div class="faq-question">What is Paca Finance?</div>
@@ -104,7 +119,9 @@
             </div>
 
             <div class="faq-section">
-                <h2 class="category-title">Staking Questions</h2>
+                <div class="category-title-container">
+                    <h2 class="category-title">Staking Questions</h2>
+                </div>
                 
                 <div class="faq-item">
                     <div class="faq-question">What are the benefits of staking?</div>
@@ -153,7 +170,9 @@
             </div>
 
             <div class="faq-section">
-                <h2 class="category-title">Vault Questions</h2>
+                <div class="category-title-container">
+                    <h2 class="category-title">Vault Questions</h2>
+                </div>
                 
                 <div class="faq-item">
                     <div class="faq-question">How do vaults work?</div>
@@ -182,7 +201,10 @@
             </div>
 
             <div class="faq-section">
-                <h2 class="category-title">The Warchest</h2>
+                <div class="category-title-container">
+                    <h2 class="category-title">The Warchest</h2>
+                    <img src="https://na-703498136.imgix.net/warchest.png" alt="Warchest Icon" class="section-icon">
+                </div>
                 
                 <div class="faq-item">
                     <div class="faq-question">What is The Warchest?</div>
