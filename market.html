@@ -133,6 +133,29 @@
         .guide-instruction {
             margin-bottom: 1rem;
         }
+
+        .guide-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .guide-step-content {
+            flex: 1;
+        }
+
+        .guide-step-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .guide-step-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body>
@@ -186,8 +209,18 @@
             <div class="section-image">
                 <img src="https://na-703498136.imgix.net/SELL%20STAKE%20BUTTON.png" alt="Sell Stake Button" class="img-fluid">
             </div>
+            
+            <div class="guide-step">
+                <div class="guide-step-content">
+                    <p><strong>1. Listing your stakes:</strong></p>
+                    <p>Scroll down to view your available stakes that you want to sell.</p>
+                </div>
+                <div class="guide-step-image">
+                    <img src="https://na-703498136.imgix.net/sell%20stake.png" alt="Available Stakes" class="img-fluid">
+                </div>
+            </div>
+
             <ul>
-                <li>Listing your stakes</li>
                 <li>Setting prices</li>
                 <li>Managing listings</li>
                 <li>Completing sales</li>
